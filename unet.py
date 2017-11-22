@@ -116,13 +116,3 @@ for i, (x, y) in enumerate(data_loader):
 		optimizer.step()
 
 		print("epoch ", a, "loss ", loss.data[0])
-
-
-
-
-
-
-
-
-
-
