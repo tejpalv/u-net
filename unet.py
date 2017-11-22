@@ -32,12 +32,6 @@ def conv2x2(in_c, out, kernel_size=3, stride=1, padding=1, bias=True, useBN=Fals
 					nn.ReLU()
 					)
 
-def concat(c, f, in_c, in_f, up):
-	conv1 = nn.ConvTranspose2d(c, f, 4, 2, 1, bias=False)
-	torch.cat(conv1, f)
-
-	return nn.Sequential(nn.ConvTranspose2d(c, f, 4, 2, 1, bias=False))
-	upsample(c)
 
 def upsample(c, f):
 	return nn.Sequential(
